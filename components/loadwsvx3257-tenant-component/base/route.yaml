@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadwsvx3257-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadwsvx3257-tenant-component
+    app.kubernetes.io/part-of: loadwsvx3257-tenant-app
+  name: loadwsvx3257-tenant-component
+  namespace: loadwsvx3257-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadwsvx3257-tenant-component
+    weight: null
+status: {}
